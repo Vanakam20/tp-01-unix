@@ -3,7 +3,7 @@
 <h2>1.1 Debian et supports d’intallation</h2><br>
 La version installer est la version actuelle la stable, bookworm : version 12 <br>
 
-<h2>1.4 Installation</h2>h2><br>
+<h2>1.4 Installation</h2>
 j'ai galéré.
 
 <h1>2 Post-Installation</h1><br>
@@ -12,14 +12,13 @@ apt search ssh<br>
 apt install openssh-server<br>
 nano /etc/ssh/sshd_config<br>
 
-
 Cherche la ligne suivante :<br>
 #PermitRootLogin prohibit-password <br>
 Modifie-la pour : <br>
 PermitRootLogin yes <br>
 systemctl restart ssh
 
-<h2>2.2 Connexion à la machine virtuelle depuis la machine hôte</h2><br>
+<h2>2.2 Connexion à la machine virtuelle depuis la machine hôte</h2>
 ip a<br>
 ssh root@<adresse_ip_vm> <br>
 Remplace <adresse_ip_vm> par l'adresse IP de la machine virtuelle. <br>
@@ -28,13 +27,13 @@ un message de confirmation devrait apparaitre.<br>
 La connexion a la machine de l'hôte ne fonctionne pas,<br>
 "ssh: connect to host <adresse_ip_vm> port 22: Connection timed out"<br>
 
-2.3 Nombre de paquets installés<br>
+<h2>2.3 Nombre de paquets installés</h2>
 dpkg -l | wc -l             (environ 320)<br>
 
-2.4 Space Usage<br>
-l'espace utiliser repensant 970 Mo
+<h2>2.4 Space Usage</h2>
+l'espace utiliser repensant 970 Mo <br>
 
-2.5 Résultats et explications des commandes<br>
+<h2>2.5 Résultats et explications des commandes</h2>
 echo $LANG ; résultat: en_US.UTF-8 <br>
 
 -hostname ; résultat: *vbox* <br>
@@ -53,7 +52,7 @@ echo $LANG ; résultat: en_US.UTF-8 <br>
 
 -*df -h* ; donne une vision d'ensemble de l'utilisation de l'espace disque. <br>
 
-3. Aller plus loin
+<h1>3. Aller plus loin</h1>
 Preseed : Le preseed est un fichier de configuration qui permet d'automatiser l'installation de Debian et dérivés. Cela sert à répondre automatiquement aux questions posées durant l'installation (comme les paramètres de partitionnement, la configuration réseau, etc.). <br>
 
 Rescue Mode : Si tu oublies ton mot de passe root, tu peux redémarrer ta machine virtuelle en mode "rescue" ou "recovery" et suivre les étapes pour changer le mot de passe :<br>
