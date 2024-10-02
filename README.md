@@ -33,11 +33,17 @@ df -h
 l'espace utiliser repensant 970 Mo
 
 2.5 Résultats et explications des commandes
-echo $LANG ; résultat: en_US.UTF-8
-hostname ; résultat: vbox
-hostname -d ; résultat:sorbonne-universite.fr
-verification emplacement depots ;  Pour vérifier quels dépôts sont activés pour l'installation de paquets, résultat: deb http://deb.debian.org/debian/ bookworm main
-passwd/shadow ; Pour voir les comptes ayant un mot de passe configuré
-compte utilisateurs ; affiche les comptes utilisateurs mais sauf ceux qui sont associés à des services ou les comptes systems
-fdisk -l et fdisk -x ; fdisk -l affiche la table des partitions et les informations sur le disque. La commande fdisk -x donne plus de détails sur la géométrie et les structures de disque. Cela te permet d'examiner la structure des partitions.
-df -h ; donne une vue d'ensemble de l'utilisation de l'espace disque.
+echo $LANG ; résultat: en_US.UTF-8 <br>
+
+-hostname ; résultat: *vbox* <br>
+
+-hostname -d ; résultat:*sorbonne-universite.fr* <br>
+
+-Verification emplacement depots ;  Pour vérifier quels dépôts sont activés pour l'installation de paquets, résultat: deb http://deb.debian.org/debian/ bookworm main <br>
+passwd/shadow ; Pour voir les comptes ayant un mot de passe configuré <br>
+
+-Compte utilisateurs ; affiche les comptes utilisateurs mais sauf ceux qui sont associés à des services ou les comptes systems <br>
+
+-*fdisk -l* et *fdisk -x* ; fdisk -l affiche la table des partitions et les informations sur le disque. La commande fdisk -x donne plus de détails sur la géométrie et les structures de disque. Cela te permet d'examiner la structure des partitions. <br>
+
+*df -h* ; donne une vision d'ensemble de l'utilisation de l'espace disque. <br>
