@@ -56,7 +56,7 @@ l'espace utiliser repensant 970 Mo <br>
 
 <strong>Rescue Mode</strong> : Si tu oublies ton mot de passe root, tu peux redémarrer ta machine virtuelle en mode "rescue" ou "recovery" et suivre les étapes pour changer le mot de passe :<br>
 --Redémarre la machine.<br>
---Accède au mode "rescue" dans GRUB en appuyent sur ESC puis sur "c" au lancement .<br>
+--Accède au mode "rescue" dans GRUB en appuyent sur "c" au lancement .<br>
 --Une fois dans le mode "rescue", utilise la commande suivante pour réinitialiser le mot de passe root :<br>
 --passwd root<br>
 
