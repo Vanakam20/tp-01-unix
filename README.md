@@ -1,11 +1,9 @@
 # tp-01-unix
-<h1>1 Installation Machine virtuelle</h1><br>
-<h2>1.1 Debian et supports d’intallation</h2><br>
+<h1>1 Installation Machine virtuelle</h1>
+<h2>1.1 Debian et supports d’intallation</h2>
 La version installer est la version actuelle la stable, bookworm : version 12 <br>
-
 <h2>1.4 Installation</h2>
 j'ai galéré.
-
 <h1>2 Post-Installation</h1><br>
 <h2>2.1 Configuration ssh</h2><br>
 apt search ssh<br>
@@ -34,6 +32,7 @@ dpkg -l | wc -l             (environ 320)<br>
 l'espace utiliser repensant 970 Mo <br>
 
 <h2>2.5 Résultats et explications des commandes</h2>
+
 <strong>echo $LANG</strong> ; résultat: en_US.UTF-8 <br>
 
 <strong>-hostname</strong> ; résultat: *vbox* <br>
