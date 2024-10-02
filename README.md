@@ -39,15 +39,5 @@ hostname -d ; résultat:sorbonne-universite.fr
 verification emplacement depots ;  Pour vérifier quels dépôts sont activés pour l'installation de paquets, résultat: deb http://deb.debian.org/debian/ bookworm main
 passwd/shadow ; Pour voir les comptes ayant un mot de passe configuré
 compte utilisateurs ; affiche les comptes utilisateurs mais sauf ceux qui sont associés à des services ou les comptes systems
-
-
-
-Comptes utilisateurs dans /etc/passwd : Cette commande t'affiche les comptes utilisateurs sauf ceux associés à des services ou qui ne peuvent pas se connecter directement :
-cat /etc/passwd | grep -vE 'nologin|sync'
-
-
-
-fdisk -l et fdisk -x : La commande fdisk -l affiche la table des partitions et les informations sur le disque. La commande fdisk -x donne plus de détails sur la géométrie et les structures de disque. Cela te permet d'examiner la structure des partitions.
-
-
-df -h : Comme mentionné précédemment, cette commande te donne une vue d'ensemble de l'utilisation de l'espace disque.
+fdisk -l et fdisk -x ; fdisk -l affiche la table des partitions et les informations sur le disque. La commande fdisk -x donne plus de détails sur la géométrie et les structures de disque. Cela te permet d'examiner la structure des partitions.
+df -h ; donne une vue d'ensemble de l'utilisation de l'espace disque.
