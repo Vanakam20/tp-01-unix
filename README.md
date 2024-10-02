@@ -1,13 +1,16 @@
 # tp-01-unix
-1.4 Installation<br>
+<h1>1 Installation Machine virtuelle</h1><br>
+<h2>1.1 Debian et supports d’intallation</h2><br>
+La version installer est la version actuelle la stable, bookworm : version 12 <br>
+
+<h2>1.4 Installation</h2>h2><br>
 j'ai galéré.
 
-2.1 configuration ssh
-
-apt search ssh
-
+<h1>2 Post-Installation</h1><br>
+<h2>2.1 Configuration ssh</h2><br>
+apt search ssh<br>
 apt install openssh-server<br>
-nano /etc/ssh/sshd_config
+nano /etc/ssh/sshd_config<br>
 
 
 Cherche la ligne suivante :<br>
@@ -16,7 +19,7 @@ Modifie-la pour : <br>
 PermitRootLogin yes <br>
 systemctl restart ssh
 
-2.2 Connexion à la machine virtuelle depuis la machine hôte<br>
+<h2>2.2 Connexion à la machine virtuelle depuis la machine hôte</h2><br>
 ip a<br>
 ssh root@<adresse_ip_vm> <br>
 Remplace <adresse_ip_vm> par l'adresse IP de la machine virtuelle. <br>
@@ -27,7 +30,6 @@ La connexion a la machine de l'hôte ne fonctionne pas,<br>
 
 2.3 Nombre de paquets installés<br>
 dpkg -l | wc -l             (environ 320)<br>
-df -h
 
 2.4 Space Usage<br>
 l'espace utiliser repensant 970 Mo
@@ -40,10 +42,26 @@ echo $LANG ; résultat: en_US.UTF-8 <br>
 -hostname -d ; résultat:*sorbonne-universite.fr* <br>
 
 -Verification emplacement depots ;  Pour vérifier quels dépôts sont activés pour l'installation de paquets, résultat: deb http://deb.debian.org/debian/ bookworm main <br>
-passwd/shadow ; Pour voir les comptes ayant un mot de passe configuré <br>
 
--Compte utilisateurs ; affiche les comptes utilisateurs mais sauf ceux qui sont associés à des services ou les comptes systems <br>
+-passwd/shadow ; Pour voir les comptes ayant un mot de passe configuré. Exemple: <br>
+<img width="450" alt="shadow" src="https://github.com/user-attachments/assets/1c21d4d1-16c6-4d03-b95e-69efb11972b6"><br>
 
+-Compte utilisateurs ; affiche les comptes utilisateurs mais sauf ceux qui sont associés à des services ou les comptes systems. Exemple:<br>
+<img width="219" alt="user" src="https://github.com/user-attachments/assets/0f739659-fba3-4101-95fa-d3c59a2c6880"><br>
+ 
 -*fdisk -l* et *fdisk -x* ; fdisk -l affiche la table des partitions et les informations sur le disque. La commande fdisk -x donne plus de détails sur la géométrie et les structures de disque. Cela te permet d'examiner la structure des partitions. <br>
 
 -*df -h* ; donne une vision d'ensemble de l'utilisation de l'espace disque. <br>
+
+3. Aller plus loin
+Preseed : Le preseed est un fichier de configuration qui permet d'automatiser l'installation de Debian et dérivés. Cela sert à répondre automatiquement aux questions posées durant l'installation (comme les paramètres de partitionnement, la configuration réseau, etc.). <br>
+
+Rescue Mode : Si tu oublies ton mot de passe root, tu peux redémarrer ta machine virtuelle en mode "rescue" ou "recovery" et suivre les étapes pour changer le mot de passe :<br>
+Redémarre la machine.<br>
+Accède au mode "rescue" dans GRUB en appuyent sur ESC puis sur "c" au lancement .<br>
+Une fois dans le mode "rescue", utilise la commande suivante pour réinitialiser le mot de passe root :<br>
+passwd root<br>
+
+Redimensionner une partition : Pour redimensionner la partition racine sans réinstaller, il vaut utiliser gparted ou les outils resize2fs et fdisk. Il faut démonter la partition, redimensionner<br> avec fdisk, puis ajuster avec resize2fs.<br>
+
+
