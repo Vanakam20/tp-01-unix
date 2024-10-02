@@ -49,6 +49,8 @@ echo $LANG ; résultat: en_US.UTF-8 <br>
 <img width="219" alt="user" src="https://github.com/user-attachments/assets/0f739659-fba3-4101-95fa-d3c59a2c6880"><br>
  
 -*fdisk -l* et *fdisk -x* ; fdisk -l affiche la table des partitions et les informations sur le disque. La commande fdisk -x donne plus de détails sur la géométrie et les structures de disque. Cela te permet d'examiner la structure des partitions. <br>
+<img width="639" alt="fdisk" src="https://github.com/user-attachments/assets/e72b880c-d793-40f3-9cca-a4c65238c717">
+
 
 -*df -h* ; donne une vision d'ensemble de l'utilisation de l'espace disque. <br>
 
@@ -57,6 +59,7 @@ Preseed : Le preseed est un fichier de configuration qui permet d'automatiser l'
 
 Rescue Mode : Si tu oublies ton mot de passe root, tu peux redémarrer ta machine virtuelle en mode "rescue" ou "recovery" et suivre les étapes pour changer le mot de passe :<br>
 Redémarre la machine.<br>
+
 Accède au mode "rescue" dans GRUB en appuyent sur ESC puis sur "c" au lancement .<br>
 Une fois dans le mode "rescue", utilise la commande suivante pour réinitialiser le mot de passe root :<br>
 passwd root<br>
