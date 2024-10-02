@@ -56,10 +56,10 @@ l'espace utiliser repensant 970 Mo <br>
 <strong>Preseed</strong> : Le preseed est un fichier de configuration qui permet d'automatiser l'installation de Debian et dérivés. Cela sert à répondre automatiquement aux questions posées durant l'installation (comme les paramètres de partitionnement, la configuration réseau, etc.). <br>
 
 <strong>Rescue Mode</strong> : Si tu oublies ton mot de passe root, tu peux redémarrer ta machine virtuelle en mode "rescue" ou "recovery" et suivre les étapes pour changer le mot de passe :<br>
-Redémarre la machine.<br>
-Accède au mode "rescue" dans GRUB en appuyent sur ESC puis sur "c" au lancement .<br>
-Une fois dans le mode "rescue", utilise la commande suivante pour réinitialiser le mot de passe root :<br>
-passwd root<br>
+--Redémarre la machine.<br>
+--Accède au mode "rescue" dans GRUB en appuyent sur ESC puis sur "c" au lancement .<br>
+--Une fois dans le mode "rescue", utilise la commande suivante pour réinitialiser le mot de passe root :<br>
+--passwd root<br>
 
 <strong>Redimensionner une partition</strong> : Pour redimensionner la partition racine sans réinstaller, il vaut utiliser gparted ou les outils resize2fs et fdisk. Il faut démonter la partition, redimensionner<br> avec fdisk, puis ajuster avec resize2fs.<br>
 
